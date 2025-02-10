@@ -1,0 +1,1 @@
+The following CSS code snippet demonstrates an uncommon issue related to the specificity of CSS selectors.  The unexpected behavior arises because of the way CSS calculates specificity.  The `#container p` selector, while seemingly more specific, is overridden by the `p` selector due to the `!important` declaration.
