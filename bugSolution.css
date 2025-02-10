@@ -1,0 +1,28 @@
+The solution avoids using !important and instead uses a more specific selector to override the conflicting style.  This is often a cleaner and more maintainable approach to resolving style conflicts. 
+```css
+#container {
+  width: 500px;
+  border: 1px solid black;
+}
+
+#container p {
+  color: blue; /* this should override the color below, but it doesn't with bug.css*/
+}
+p {
+  color: red !important;/*this is overriding the more specific selector above*/
+}
+```
+
+```css
+#container {
+  width: 500px;
+  border: 1px solid black;
+}
+
+#container p {
+  color: blue;
+}
+p {
+  color: red;
+}
+```
